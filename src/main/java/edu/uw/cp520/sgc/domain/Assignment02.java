@@ -6,10 +6,6 @@ import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
 
-import edu.uw.cp520.scg.domain.ClientAccount;
-import edu.uw.cp520.scg.domain.Consultant;
-import edu.uw.cp520.scg.domain.TimeCard;
-
 import edu.uw.ext.util.ListFactory;
 
 /**
