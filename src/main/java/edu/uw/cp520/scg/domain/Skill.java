@@ -1,4 +1,4 @@
-package edu.uw.cp520.sgc.domain;
+package edu.uw.cp520.scg.domain;
 
 public enum Skill {
 	PROJECT_MANAGER("Project Manager",250),

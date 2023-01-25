@@ -1,4 +1,4 @@
-package edu.uw.cp520.sgc.domain;
+package edu.uw.cp520.scg.domain;
 import edu.uw.cp520.scg.util.PersonalName;
 
 public final class ClientAccount implements Account {

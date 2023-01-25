@@ -1,4 +1,4 @@
-package edu.uw.cp520.sgc.domain;
+package edu.uw.cp520.scg.domain;
 
 import java.time.LocalDate;
 
@@ -63,6 +63,12 @@ public class ConsultantTime {
 	}
 	public boolean isBillable() {
 		return account.isBillable();
+	}
+	
+	@Override
+	public String toString() {
+		return String.format("%-28s %2$tm/%2$td/%2$tY   %3$5d   %4$s%n",
+				account.getName(), date, hours, skill);
 	}
 	
 }

@@ -1,4 +1,4 @@
-package edu.uw.cp520.sgc.domain;
+package edu.uw.cp520.scg.domain;
 
 import java.io.Console;
 import java.io.OutputStreamWriter;
