@@ -2,6 +2,10 @@ package edu.uw.cp520.scg.domain;
 
 import edu.uw.cp520.scg.util.PersonalName;
 
+/**
+ * @author jimmy
+ *
+ */
 public class Consultant {
 	private final PersonalName name;
 	

@@ -4,11 +4,15 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
+import edu.uw.cp520.scg.domain.Skill;
+
 class SkillTest {
 
+	
 	@Test
-	void test() {
-		fail("Not yet implemented");
+	void getRateTest() {
+		Skill jim = new Skill("Software Engineer", 250);
+		assertEquals(250, jim.getRate());
 	}
 
 }

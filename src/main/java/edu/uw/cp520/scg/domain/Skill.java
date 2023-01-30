@@ -1,5 +1,9 @@
 package edu.uw.cp520.scg.domain;
 
+/**
+ * @author jimmy
+ *
+ */
 public enum Skill {
 	PROJECT_MANAGER("Project Manager",250),
 	SYSTEM_ARCHITECT("System_Architect",200),

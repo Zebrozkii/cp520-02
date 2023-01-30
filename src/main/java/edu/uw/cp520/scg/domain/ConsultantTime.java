@@ -2,6 +2,10 @@ package edu.uw.cp520.scg.domain;
 
 import java.time.LocalDate;
 
+/**
+ * @author jimmy
+ *
+ */
 public class ConsultantTime {
 
 	private LocalDate date;

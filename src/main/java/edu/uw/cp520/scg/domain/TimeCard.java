@@ -7,6 +7,10 @@ import java.util.Formatter;
 import java.util.List;
 import java.util.Locale;
 
+/**
+ * @author jimmy
+ *
+ */
 public class TimeCard {
 	private static final String HEADER_FORMAT="Consultant: %-28s Week Starting: %2$tb %2$td, %2$tY%n";
 	private static final String TO_STRING_FORMAT="TimeCard for : %s, Week Starting: %2$tb %2$td, %2$tY%n";

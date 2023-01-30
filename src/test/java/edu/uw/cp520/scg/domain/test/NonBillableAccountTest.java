@@ -4,11 +4,22 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
+import edu.uw.cp520.scg.domain.NonBillableAccount;
+
 class NonBillableAccountTest {
 
 	@Test
-	void test() {
-		fail("Not yet implemented");
+	void getNameTest(){
+		NonBillableAccount jim = new NonBillableAccount("bob");
+		assertEquals("bob", jim.getName());
 	}
 
-}
+	@Test
+	void isBillableTest(){
+		
+	NonBillableAccount jim = new NonBillableAccount("bob");
+	
+	assertEquals(jim.isBillable());
+
+	}
+	}

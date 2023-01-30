@@ -1,6 +1,7 @@
 package edu.uw.cp520.scg.domain;
 
 import java.io.Console;
+import edu.uw.cp520.scg.util.PersonalName;
 import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
 import java.util.ArrayList;

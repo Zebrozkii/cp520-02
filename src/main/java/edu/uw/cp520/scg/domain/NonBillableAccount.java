@@ -1,5 +1,9 @@
 package edu.uw.cp520.scg.domain;
 
+/**
+ * @author jimmy
+ *
+ */
 public enum NonBillableAccount implements Account {
 
 	SICK_LEAVE("Sick LEAVE"),
@@ -21,5 +25,10 @@ public enum NonBillableAccount implements Account {
 	public boolean isBillable() {
 		// TODO Auto-generated method stub
 		return false;
+	}
+	
+	@Override
+	public String toString() {
+		return otherName;
 	}
 }
