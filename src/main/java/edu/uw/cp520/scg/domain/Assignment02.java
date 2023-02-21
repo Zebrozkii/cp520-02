@@ -1,7 +1,5 @@
 package edu.uw.cp520.scg.domain;
-
 import java.io.Console;
-import edu.uw.cp520.scg.util.PersonalName;
 import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
 import java.util.ArrayList;
@@ -29,15 +27,12 @@ public final class Assignment02 {
      * @throws Exception if raised
      */
     public static void main(final String[] args) throws Exception {
-        // Create lists to be populated by factory
         final List<ClientAccount> accounts = new ArrayList<>();
         final List<Consultant> consultants = new ArrayList<>();
         final List<TimeCard> timeCards = new ArrayList<>();
         ListFactory.populateListsPreAddress(accounts, consultants, timeCards);
 
-        // Print 'em
         Console console = System.console();
-        @SuppressWarnings("resource")  // don't want to close console or System.out
         PrintWriter consoleWrtr = (console != null) ? console.writer() 
                                                     : new PrintWriter(new OutputStreamWriter(System.out, ENCODING), true);
 

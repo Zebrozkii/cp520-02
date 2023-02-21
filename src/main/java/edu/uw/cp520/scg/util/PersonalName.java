@@ -1,56 +1,55 @@
 package edu.uw.cp520.scg.util;
 
-public class PersonalName {
-	String firstName;
-	String lastName;
-	String middleName;
+import java.util.Objects;
 
-	 public static final String NoMiddleName="No Middle Name";
-	 
-	 public PersonalName(String firstName, String lastName, String middleName) {
-		 this.firstName=firstName;
-		 this.lastName=lastName;
-		 if(middleName==null) {
-			 this.middleName=NoMiddleName;
-		 }else {
-			 this.middleName=middleName;
-		 }
-	 }
+/**
+ * Encapsulates the first, middle and last name of a person.
+ *
+ * @author Russ Moul
+ */
+public record PersonalName (String lastName, String firstName, String middleName) {
+    /** String constant for "NMN" - no middle name. */
+    public static final String NMN = "NMN";
 
-	public String getFirstName() {
-		return firstName;
-	}
+    /**
+     * Construct a PersonalName.
+     *
+     * @param lastName value for the last name.
+     * @param firstName value for the first name.
+     * @param middleName value for the middle name.
+     */
+    public PersonalName {
+        Objects.requireNonNull(lastName);
+        Objects.requireNonNull(firstName);
+        Objects.requireNonNull(middleName);
+    }
 
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
-	}
+    /**
+     * Construct a PersonalName.
+     *
+     * @param lastName value for the last name.
+     * @param firstName value for the first name.
+     */
+    public PersonalName(final String lastName, final String firstName) {
+        this(lastName, firstName, NMN);
+    }
 
-	public String getLastName() {
-		return lastName;
-	}
-
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
-	}
-
-	public String getMiddleName() {
-		return middleName;
-	}
-
-	public void setMiddleName(String middleName) {
-		this.middleName = middleName;
-	}
-	
-	public String toString() {
-		final StringBuilder stringBuilder=new StringBuilder();
-		stringBuilder.append(lastName);
-		stringBuilder.append(", ");
-		stringBuilder.append(firstName);
-		stringBuilder.append(" ");
-		stringBuilder.append(middleName);
-		return stringBuilder.toString();
-		
-	}
-	
-
+    /**
+     * Create string representation of this object in the format
+     * <br>
+     * "LastName, FirstName MiddleName".
+     *
+     * @return the formatted name.
+     */
+    @Override
+    public String toString() {
+        final StringBuilder output = new StringBuilder();
+        output.append(lastName);
+        output.append(", ");
+        output.append(firstName);
+        output.append(" ");
+        output.append(middleName);
+        return output.toString();
+    }
 }
+

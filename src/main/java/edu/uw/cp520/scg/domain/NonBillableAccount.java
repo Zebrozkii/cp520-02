@@ -3,6 +3,7 @@ package edu.uw.cp520.scg.domain;
 /**
  * @author jimmy
  *
+ *enum
  */
 public enum NonBillableAccount implements Account {
 

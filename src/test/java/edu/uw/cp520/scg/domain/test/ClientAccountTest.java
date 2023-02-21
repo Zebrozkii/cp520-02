@@ -1,4 +1,4 @@
-package edu.uw.cp520.scg.domain;
+package edu.uw.cp520.scg.domain.test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -13,14 +13,14 @@ import edu.uw.cp520.scg.util.PersonalName;
  * JUnit test for ClientAccount class.
  */
 public final class ClientAccountTest {
-    /** String constant for "FooBar.com". */
-    private static final String FOOBAR_DOT_COM = "FooBar.com";
+    /** String constant for "JIM". */
+    private static final String JMMZ = "JIM";
     /** String constant for "Client". */
     private static final String CLIENT = "Client";
-    /** String constant for "J.". */
-    private static final String J_DOT = "J.";
-    /** String constant for "Random". */
-    private static final String RANDOM = "Random";
+    /** String constant for "Robert". */
+    private static final String R_MID = "Robert";
+    /** String constant for "THING". */
+    private static final String THING = "THING";
     /** ClientAccount for test. */
     private ClientAccount client;
 
@@ -29,8 +29,8 @@ public final class ClientAccountTest {
      */
     @BeforeEach
     public void setUp() {
-        client = new ClientAccount(FOOBAR_DOT_COM,
-                                   new PersonalName(CLIENT, J_DOT, RANDOM));
+        client = new ClientAccount(JMMZ,
+                                   new PersonalName(CLIENT, R_MID, THING));
     }
 
     /**
@@ -46,7 +46,7 @@ public final class ClientAccountTest {
      */
     @Test
     public void testSetGetName() {
-        assertEquals(FOOBAR_DOT_COM, client.getName());
+        assertEquals(JMMZ, client.getName());
     }
 
     /**
@@ -54,13 +54,13 @@ public final class ClientAccountTest {
      */
     @Test
     public void testSetGetContact() {
-        final PersonalName[] tests = {new edu.uw.cp520.scg.util.PersonalName("Coyote", "Wiley"), null};
+        final PersonalName[] tests = {new edu.uw.cp520.scg.util.PersonalName("Bob", "Zeb","jim")};
 
         for (int i = 0; i < tests.length; i++) {
             client.setContact(tests[i]);
             assertEquals(tests[i], client.getContact());
         }
-        final PersonalName n1 = new edu.uw.cp520.scg.util.PersonalName("Coyote", "Wiley");
+        final PersonalName n1 = new edu.uw.cp520.scg.util.PersonalName("Bob", "Zeb","jim");
         final PersonalName n2 = null;
 
         client.setContact(n1);
